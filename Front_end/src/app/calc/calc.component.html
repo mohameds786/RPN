@@ -1,0 +1,26 @@
+
+<div class="modal-header"><div id="para"></div>
+    <ul class="list-group">
+        <button class="btn-toolbar"*ngFor="let stackid of stackids" (click)="getastack(stackid)">
+        <app-appareil>{{stackid}}</app-appareil></button>
+    </ul>
+    <ul class="">
+        <li *ngFor="let va of stack">{{va}}</li>
+    </ul>
+    <input type="text" class="form-control" [(ngModel)]="value">
+
+
+</div>
+<div class="btn-group-sm">
+<button type="button" class="btn btn-success"
+        *ngFor="let button of buttons" (click)="operation(button)">{{button}}</button>
+
+</div>
+<div>
+    <br>
+</div>
+
+<div class="btn-group">
+<button type="button" class="btn btn-default"
+        *ngFor="let opt of options" (click)="do_opt(opt)">{{opt}}</button>
+</div>
