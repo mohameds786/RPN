@@ -32,7 +32,7 @@ def home():
 @cross_origin(origin='*',headers=['Content-Type', 'Authorization'])
 def get_list_of_operands():
     """Get the list of all operands"""
-    return {"operations": ["+", "-", "/", "*"]}
+    return {"operations": ["add", "diff", "div", "mult"]}
 
 
 @app.route('/rpn/stack', methods=['GET', 'POST'])
@@ -57,13 +57,13 @@ def apply_operation(op, stackid):
     stack = stacks[stackid]
     element = stack.pop(-1)
     el = stack.pop(-1)
-    if op == '/':
-        stack.append(el / element)
-    elif op == '*':
+    if op == 'div':
+        stack.append(el/element)
+    elif op == 'mult':
         stack.append(el * element)
-    elif op == '+':
+    elif op == 'add':
         stack.append(el + element)
-    elif op == '-':
+    elif op == 'diff':
         stack.append(el - element)
     stacks[stackid] = stack
     print(stacks)
