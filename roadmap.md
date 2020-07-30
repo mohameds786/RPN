@@ -5,3 +5,4 @@
 - Stockage des stacks dans une base de données plutôt dans une liste, cela permettrait de les récupérer même après redémarrage du Back End
 - Stockage par utilisateur pour que chaque utilisateur ait ses stacks
 - Tri des valeurs d'une stack
+- Exporter une/des stacks dans un fichier
